@@ -242,7 +242,7 @@ export default function Home() {
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-2 font-semibold">Contact</h3>
-                <p className="text-gray-600">danaogroupoffice@gmail.com</p>
+                <p className="text-gray-600">info@danaogroup.com.au</p>
               </div>
             </div>
           </div>
@@ -277,14 +277,14 @@ export default function Home() {
                 <Facebook className="w-6 h-6" />
               </a>
               <a 
-                href="mailto:danaogroupoffice@gmail.com"
+                href="mailto:info@danaogroup.com.au"
                 className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all"
               >
                 <Mail className="w-6 h-6" />
               </a>
             </div>
             
-            <p className="text-purple-200 mb-2">danaogroupoffice@gmail.com</p>
+            <p className="text-purple-200 mb-2">info@danaogroup.com.au</p>
             <p className="text-purple-300 text-sm">
               © 2026 Hide N Seek Child Care. All Rights Reserved.
             </p>
