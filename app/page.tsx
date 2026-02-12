@@ -23,7 +23,7 @@ export default function Home() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // delegate to Formspree handler
     return handleFormSubmit(e);
   };
