@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
+import { useForm } from '@formspree/react';
 import { Heart, BookOpen, Palette, GraduationCap, Instagram, Facebook, Mail, MapPin, Calendar } from 'lucide-react';
 import { FloatingShapes } from '@/components/FloatingShapes';
 
@@ -13,7 +14,7 @@ export default function Home() {
     suburb: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [state, handleFormSubmit] = useForm("contact-form");
 
   const scrollToForm = () => {
     const formSection = document.getElementById('signup-form');
@@ -23,13 +24,8 @@ export default function Home() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // Mock form submission
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', childAge: '', suburb: '' });
-    }, 3000);
+    // delegate to Formspree handler
+    return handleFormSubmit(e);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -133,7 +129,7 @@ export default function Home() {
             Leave your details below and we&apos;ll notify you when enrolments open.
           </p>
           
-          {submitted ? (
+          {state.succeeded ? (
             <div className="bg-green-100 border-2 border-green-500 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-white" />
@@ -235,7 +231,7 @@ export default function Home() {
                   type="submit"
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-xl mt-6"
                 >
-                  Notify Me
+                  {state.submitting ? 'Sending...' : 'Notify Me'}
                 </button>
                 
                 <p className="text-sm text-gray-600 text-center mt-4">
@@ -289,7 +285,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-8">
             <img 
-              src="/logo.svg" 
+              src="/image.png" 
               alt="Hide N Seek Child Care" 
               className="w-48 mb-6 drop-shadow-lg"
             />

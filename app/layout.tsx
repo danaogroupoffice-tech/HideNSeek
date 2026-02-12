@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FormspreeProviderWrapper from "@/components/FormspreeProviderWrapper";
 
 export const metadata: Metadata = {
   title: "Hide N Seek Child Care",
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-        {children}
+        <FormspreeProviderWrapper>
+          {children}
+        </FormspreeProviderWrapper>
       </body>
     </html>
   );
