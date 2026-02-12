@@ -1,0 +1,16 @@
+{
+  "forms": {
+    "contact-form": {
+      "name": "Hide N Seek Contact Form",
+      "actions": [
+        {
+          "type": "sendConfirmationEmail"
+        },
+        {
+          "type": "sendNotificationEmail",
+          "to": "danaogroupoffice@gmail.com"
+        }
+      ]
+    }
+  }
+}
