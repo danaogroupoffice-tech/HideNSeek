@@ -1,38 +1,17 @@
 "use client";
 
-import { useState } from 'react';
 import { useForm } from '@formspree/react';
 import { Heart, BookOpen, Palette, GraduationCap, Instagram, Facebook, Mail, MapPin, Calendar } from 'lucide-react';
 import { FloatingShapes } from '@/components/FloatingShapes';
 
 export default function Home() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    childAge: '',
-    suburb: ''
-  });
-
-  const [state, handleFormSubmit] = useForm("contact-form");
+  const [state, handleSubmit] = useForm("contact-form");
 
   const scrollToForm = () => {
     const formSection = document.getElementById('signup-form');
     if (formSection) {
       formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // delegate to Formspree handler
-    return handleFormSubmit(e);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   return (
@@ -149,8 +128,6 @@ export default function Home() {
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800"
                     placeholder="Your full name"
                   />
@@ -165,8 +142,6 @@ export default function Home() {
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800"
                     placeholder="your.email@example.com"
                   />
@@ -181,8 +156,6 @@ export default function Home() {
                     id="phone"
                     name="phone"
                     required
-                    value={formData.phone}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800"
                     placeholder="0400 000 000"
                   />
@@ -197,8 +170,6 @@ export default function Home() {
                       id="childAge"
                       name="childAge"
                       required
-                      value={formData.childAge}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800"
                     >
                       <option value="">Select age</option>
@@ -219,8 +190,6 @@ export default function Home() {
                       id="suburb"
                       name="suburb"
                       required
-                      value={formData.suburb}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800"
                       placeholder="Your suburb"
                     />
