@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green semi-circle (left) -->
+  <circle cx="220" cy="280" r="60" fill="#22C55E" opacity="0.8"/>
+  <rect x="220" y="220" width="60" height="120" fill="#22C55E" opacity="0.8"/>
+  
+  <!-- Pink triangle (top right) -->
+  <polygon points="550,220 610,320 490,320" fill="#EC4899"/>
+  
+  <!-- Blue triangle (bottom left) -->
+  <polygon points="200,540 280,460 320,560" fill="#3B82F6"/>
+  
+  <!-- Yellow semi-circle (bottom right) -->
+  <circle cx="600" cy="520" r="50" fill="#FBBF24" opacity="0.9"/>
+  <rect x="550" y="520" width="100" height="50" fill="#FBBF24" opacity="0.9"/>
+  
+  <!-- Main text: HIDE -->
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1E1B4B" text-anchor="middle">
+    HIDE
+  </text>
+  
+  <!-- Main text: N SEEK -->
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1E1B4B" text-anchor="middle">
+    N SEEK
+  </text>
+  
+  <!-- Subtitle: Child Care (italic and orange) -->
+  <text x="400" y="530" font-family="Arial, sans-serif" font-size="70" font-style="italic" fill="#F97316" text-anchor="middle">
+    Child Care
+  </text>
+</svg>

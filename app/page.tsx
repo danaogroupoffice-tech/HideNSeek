@@ -47,12 +47,11 @@ export default function Home() {
       <section className="relative px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-10 md:mb-12 flex justify-center">
-            <div className="w-72 md:w-[450px] h-auto drop-shadow-lg">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">Hide N Seek</h2>
-                <p className="text-lg opacity-90">Child Care & Learning</p>
-              </div>
-            </div>
+            <img 
+              src="/logo.svg" 
+              alt="Hide N Seek Child Care" 
+              className="w-72 md:w-[450px] h-auto drop-shadow-lg"
+            />
           </div>
           
           <h1 className="text-5xl md:text-6xl mb-6 text-purple-700 font-bold">
@@ -289,12 +288,11 @@ export default function Home() {
       <footer className="relative px-4 py-12 bg-purple-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-8">
-            <div className="w-48 mb-6">
-              <div className="bg-gradient-to-br from-purple-300 to-pink-300 rounded-2xl p-6 text-center">
-                <h2 className="text-2xl font-bold text-purple-900 mb-1">Hide N Seek</h2>
-                <p className="text-sm text-purple-800">Child Care & Learning</p>
-              </div>
-            </div>
+            <img 
+              src="/logo.svg" 
+              alt="Hide N Seek Child Care" 
+              className="w-48 mb-6 drop-shadow-lg"
+            />
             
             <div className="flex gap-6 mb-6">
               <a 
