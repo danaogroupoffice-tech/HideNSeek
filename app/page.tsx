@@ -48,7 +48,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-10 md:mb-12 flex justify-center">
             <img 
-              src="/logo.svg" 
+              src="/image.png" 
               alt="Hide N Seek Child Care" 
               className="w-72 md:w-[450px] h-auto drop-shadow-lg"
             />
