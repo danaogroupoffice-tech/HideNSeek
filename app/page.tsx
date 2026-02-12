@@ -1,9 +1,10 @@
+'use client';
+
 import { useState } from 'react';
 import { Heart, BookOpen, Palette, GraduationCap, Instagram, Facebook, Mail, MapPin, Calendar } from 'lucide-react';
-import logo from 'figma:asset/73e5b1fd45a90cb1578b38c1d866437e2d05d208.png';
-import { FloatingShapes } from './components/FloatingShapes';
+import { FloatingShapes } from '@/components/FloatingShapes';
 
-export default function App() {
+export default function Home() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,18 +40,19 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+    <div className="min-h-screen overflow-hidden">
       <FloatingShapes />
       
       {/* Hero Section */}
       <section className="relative px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-10 md:mb-12 flex justify-center">
-            <img 
-              src={logo} 
-              alt="Hide N Seek Child Care" 
-              className="w-72 md:w-[450px] h-auto drop-shadow-lg"
-            />
+            <div className="w-72 md:w-[450px] h-auto drop-shadow-lg">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">Hide N Seek</h2>
+                <p className="text-lg opacity-90">Child Care & Learning</p>
+              </div>
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-6xl mb-6 text-purple-700 font-bold">
@@ -91,7 +93,7 @@ export default function App() {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl text-gray-900 mb-2 font-semibold">Safe & Secure Environment</h3>
-              <p className="text-gray-600">Your child's safety is our top priority</p>
+              <p className="text-gray-600">Your child&apos;s safety is our top priority</p>
             </div>
             
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl text-center shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
@@ -129,7 +131,7 @@ export default function App() {
           </h2>
           
           <p className="text-lg text-center text-gray-700 mb-10">
-            Leave your details below and we'll notify you when enrolments open.
+            Leave your details below and we&apos;ll notify you when enrolments open.
           </p>
           
           {submitted ? (
@@ -138,7 +140,7 @@ export default function App() {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl text-green-800 mb-2 font-semibold">Thank You!</h3>
-              <p className="text-green-700">We'll be in touch soon with exciting updates.</p>
+              <p className="text-green-700">We&apos;ll be in touch soon with exciting updates.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl">
@@ -194,7 +196,7 @@ export default function App() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="childAge" className="block text-gray-800 mb-2 font-medium">
-                      Child's Age *
+                      Child&apos;s Age *
                     </label>
                     <select
                       id="childAge"
@@ -287,11 +289,12 @@ export default function App() {
       <footer className="relative px-4 py-12 bg-purple-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-8">
-            <img 
-              src={logo} 
-              alt="Hide N Seek Child Care" 
-              className="w-48 h-auto mb-6 brightness-0 invert opacity-90"
-            />
+            <div className="w-48 mb-6">
+              <div className="bg-gradient-to-br from-purple-300 to-pink-300 rounded-2xl p-6 text-center">
+                <h2 className="text-2xl font-bold text-purple-900 mb-1">Hide N Seek</h2>
+                <p className="text-sm text-purple-800">Child Care & Learning</p>
+              </div>
+            </div>
             
             <div className="flex gap-6 mb-6">
               <a 
