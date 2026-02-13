@@ -4,10 +4,7 @@
       "name": "Hide N Seek Contact Form",
       "actions": [
         {
-          "type": "sendConfirmationEmail"
-        },
-        {
-          "type": "sendNotificationEmail",
+          "type": "email",
           "to": "info@danaogroup.com.au"
         }
       ]
